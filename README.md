@@ -2,5 +2,5 @@
 
 ## How to add
 ```
-brew tap kpherox/personal-repo
+brew tap kpherox/personal
 ```
