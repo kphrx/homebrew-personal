@@ -6,7 +6,5 @@ After making all changes to the cask:
 
 Additionally, if **adding a new cask**:
 
-- [ ] Named the cask according to the [token reference].
 - [ ] `brew cask install {{cask_file}}` worked successfully.
 - [ ] `brew cask uninstall {{cask_file}}` worked successfully.
-
