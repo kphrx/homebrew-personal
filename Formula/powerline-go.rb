@@ -8,9 +8,12 @@ class PowerlineGo < Formula
 
   def install
     ENV["GOPATH"] = buildpath
+    ENV["GO111MODULE"] = "on"
+
     (buildpath/"src/github.com/justjanne/powerline-go").install buildpath.children
     cd "src/github.com/justjanne/powerline-go" do
-      system "go", "get", "-d"
+      system "go", "mod", "init"
+      system "go", "mod", "tidy"
       system "go", "build"
       bin.install "powerline-go"
       prefix.install_metafiles
