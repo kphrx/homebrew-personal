@@ -10,8 +10,10 @@ class PowerlineGo < Formula
     ENV["GOPATH"] = buildpath
     ENV["GO111MODULE"] = "on"
 
-    (buildpath/"src/github.com/justjanne/powerline-go").install buildpath.children
-    cd "src/github.com/justjanne/powerline-go" do
+    srcpath = buildpath/"src/github.com/justjanne/powerline-go"
+    srcpath.install buildpath.children
+
+    cd srcpath do
       system "go", "mod", "init"
       system "go", "mod", "tidy"
       system "go", "build"
