@@ -1,6 +1,6 @@
 cask 'nowplayingtweet' do
-  version '0.5'
-  sha256 'b2b81f450ff62eb4bbbd4d321a9dde020ebb21e32fbc5d23c72b258de7b36dc5'
+  version '0.5.1'
+  sha256 'd796b563d9461abffded73232fa69c4ba12f41867dd4ff058f631fc1f45d0572'
 
   # github.com/kPherox/NowPlayingTweet was verified as official when first introduced to the cask
   url "https://github.com/kPherox/NowPlayingTweet/releases/download/#{version}/NowPlayingTweet-#{version}.zip"
