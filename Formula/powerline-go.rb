@@ -14,8 +14,6 @@ class PowerlineGo < Formula
     srcpath.install buildpath.children
 
     cd srcpath do
-      system "go", "mod", "init"
-      system "go", "mod", "tidy"
       system "go", "build"
       bin.install "powerline-go"
       prefix.install_metafiles
