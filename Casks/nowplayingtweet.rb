@@ -5,6 +5,7 @@ cask "nowplayingtweet" do
   url "https://github.com/kPherox/NowPlayingTweet/releases/download/#{version}/NowPlayingTweet-#{version}.zip",
       verified: "github.com/kPherox/NowPlayingTweet"
   name "NowPlayingTweet"
+  desc "Tweet #NowPlaying with iTunes"
   homepage "https://github.kpherox.dev/NowPlayingTweet"
 
   livecheck do
