@@ -4,9 +4,14 @@ cask "nowplayingtweet" do
 
   url "https://github.com/kPherox/NowPlayingTweet/releases/download/#{version}/NowPlayingTweet-#{version}.zip",
       verified: "github.com/kPherox/NowPlayingTweet"
-  appcast "https://github.com/kPherox/NowPlayingTweet/releases.atom"
   name "NowPlayingTweet"
-  homepage "https://github.kr-kp.com/NowPlayingTweet"
+  desc "Tweet #NowPlaying with iTunes"
+  homepage "https://github.kpherox.dev/NowPlayingTweet"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "NowPlayingTweet.app"
 end
