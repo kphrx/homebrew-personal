@@ -1,0 +1,17 @@
+name: Formula CI
+
+on:
+  pull_request:
+    paths-ignore:
+      - "Casks/**"
+    # paths:
+    #   - "Formula/**"
+
+jobs:
+  conclusion:
+    name: conclusion
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Result
+        run: ${{ true }}
