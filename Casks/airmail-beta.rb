@@ -1,17 +1,16 @@
 cask "airmail-beta" do
   # version :latest
+  version "6.0+679,526"
   # sha256 :no_check
-  version "5.0,663:517"
-  sha256 "b3eece3ab353c7614d09c5b84dc223ef207d2d43e19e5c540df8d89f2699cbad"
+  sha256 "07992139ee8d3796f7493645504981afec36c36100805ff5c40f86970b05731e"
 
   url do
     require "open-uri"
     require "json"
-    # base_url = "https://install.appcenter.ms/api/v0.1/apps/airmail-devs-organization/airmail-beta/distribution_groups/all-users-of-airmail-beta/releases/latest"
-    base_url = "https://install.appcenter.ms/api/v0.1/apps/airmail-devs-organization/airmail-beta/distribution_groups/all-users-of-airmail-beta/releases/#{version.after_comma.after_colon}"
+    base_url = "https://install.appcenter.ms/api/v0.1/apps/airmail-devs-organization/airmail-beta/distribution_groups/all-users-of-airmail-beta/releases/#{version.after_comma}"
     URI(base_url).open do |release_page|
       latest_json = JSON.parse(release_page.read)
-      latest_json["download_url"]
+      [latest_json["download_url"], { verified: "appcenter-filemanagement-distrib4ede6f06e.azureedge.net" }]
     end
   end
   name "Airmail Beta"
@@ -23,11 +22,10 @@ cask "airmail-beta" do
     strategy :page_match do |page|
       require "json"
       latest_json = JSON.parse(page)
-      "#{latest_json["short_version"]},#{latest_json["version"]}:#{latest_json["id"]}"
+      "#{latest_json["short_version"]}+#{latest_json["version"]},#{latest_json["id"]}"
     end
   end
 
-  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Airmail Beta.app"
