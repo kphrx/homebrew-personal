@@ -1,10 +1,10 @@
-After making all changes to the cask:
+After making all changes to a cask, verify:
 
-- [ ] `brew cask audit --download {{cask_file}}` is error-free.
-- [ ] `brew cask style --fix {{cask_file}}` reports no offenses.
-- [ ] The commit message includes the cask’s name and version.
+- [ ] `brew audit --cask <cask>` is error-free.
+- [ ] `brew style --fix <cask>` reports no offenses.
 
-Additionally, if **adding a new cask**:
+Additionally, **if adding a new cask**:
 
-- [ ] `brew cask install {{cask_file}}` worked successfully.
-- [ ] `brew cask uninstall {{cask_file}}` worked successfully.
+- [ ] `brew audit --new-cask <cask>` worked successfully.
+- [ ] `brew install --cask <cask>` worked successfully.
+- [ ] `brew uninstall --cask <cask>` worked successfully.
