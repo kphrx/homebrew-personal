@@ -10,7 +10,7 @@ cask "airmail-beta" do
     base_url = "https://install.appcenter.ms/api/v0.1/apps/airmail-devs-organization/airmail-beta/distribution_groups/all-users-of-airmail-beta/releases/#{version.after_comma}"
     URI(base_url).open do |release_page|
       latest_json = JSON.parse(release_page.read)
-      latest_json["download_url"]
+      [latest_json["download_url"], { verified: "appcenter-filemanagement-distrib4ede6f06e.azureedge.net" }]
     end
   end
   name "Airmail Beta"
