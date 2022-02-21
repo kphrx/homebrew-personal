@@ -7,7 +7,7 @@ cask "font-cica-without-emoji" do
   name "Cica"
   homepage "https://github.com/miiton/Cica"
 
-  conflicts_with cask: "font-cica"
+  conflicts_with cask: "homebrew/cask-fonts/font-cica"
 
   font "Cica-Bold.ttf"
   font "Cica-BoldItalic.ttf"
