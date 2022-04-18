@@ -1,8 +1,8 @@
 cask "airmail-beta" do
   # version :latest
-  version "6.0+679,526"
+  version "6.1.3+694,536"
   # sha256 :no_check
-  sha256 "07992139ee8d3796f7493645504981afec36c36100805ff5c40f86970b05731e"
+  sha256 "efe648025d9b67c596f755829b661c571b6cdd4f695d8effa5d18e35755c8e73"
 
   url do
     require "open-uri"
