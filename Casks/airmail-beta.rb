@@ -1,8 +1,8 @@
 cask "airmail-beta" do
   # version :latest
-  version "6.1.3+694,536"
+  version "6.1.5+696,538"
   # sha256 :no_check
-  sha256 "efe648025d9b67c596f755829b661c571b6cdd4f695d8effa5d18e35755c8e73"
+  sha256 "2d52018fc8de17e01d66c30c55348e2688a314cdd35843662825d281cab9b428"
 
   url "https://install.appcenter.ms/api/v0.1/apps/airmail-devs-organization/airmail-beta/distribution_groups/all-users-of-airmail-beta/releases/#{version.after_comma}" do |page|
     require "json"
