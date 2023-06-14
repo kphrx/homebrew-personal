@@ -27,4 +27,8 @@ cask "nowplayingtweet" do
   end
 
   app "NowPlayingTweet.app"
+
+  caveats do
+    discontinued
+  end
 end
