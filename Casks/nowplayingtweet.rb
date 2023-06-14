@@ -9,7 +9,20 @@ cask "nowplayingtweet" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"]
+
+        value = T.let(nil, T.untyped)
+        ["tag_name", "name"].find do |key|
+          match = release[key]&.match(regex)
+          next if match.blank?
+
+          value = match[1]
+        end
+        value
+      end
+    end
   end
 
   app "NowPlayingTweet.app"
