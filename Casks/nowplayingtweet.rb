@@ -14,7 +14,8 @@ cask "nowplayingtweet" do
         next if release["draft"]
 
         value = T.let(nil, T.untyped)
-        ["tag_name", "name"].find do |key|
+        version_keys = ["tag_name", "name"]
+        version_keys.find do |key|
           match = release[key]&.match(regex)
           next if match.blank?
 
