@@ -1,6 +1,6 @@
 cask "jpki" do
-  version "3.5"
-  sha256 "b2d3b6175975df77a3757633dd5f9fd316e0592cf192374f4b2f75faac06065c"
+  version "3.6"
+  sha256 "573b0cb731fd48b40b7c021a805d50d43f3f1f9f72eecf0d22fc62b83eab23e3"
 
   url "https://www2.jpki.go.jp/client/download/101/JPKIMac_0#{version.major}-0#{version.minor}_01-00.dmg"
   name "JPKI"
