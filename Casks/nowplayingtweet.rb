@@ -7,6 +7,8 @@ cask "nowplayingtweet" do
   desc "Tweet #NowPlaying with iTunes"
   homepage "https://github.com/nowplayingtweet/NowPlayingTweet"
 
+  deprecate! date: "2023-02-02", because: :discontinued
+
   livecheck do
     url :url
     strategy :github_releases do |json, regex|
@@ -27,8 +29,4 @@ cask "nowplayingtweet" do
   end
 
   app "NowPlayingTweet.app"
-
-  caveats do
-    discontinued
-  end
 end
