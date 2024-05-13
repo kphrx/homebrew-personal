@@ -26,9 +26,7 @@ cask "nowplayingtweet" do
     end
   end
 
-  app "NowPlayingTweet.app"
+  deprecate! date: "2023-02-02", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "NowPlayingTweet.app"
 end
