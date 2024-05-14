@@ -25,10 +25,6 @@ cask "vmware-fusion@12" do
   auto_updates true
   conflicts_with cask: %w[
     vmware-fusion
-    vmware-fusion7
-    vmware-fusion8
-    vmware-fusion10
-    vmware-fusion11
     vmware-fusion-tech-preview
   ]
   depends_on macos: ">= :catalina"
