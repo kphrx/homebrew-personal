@@ -3,17 +3,18 @@ cask "vmware-fusion@12" do
     version "12.1.2,17964953"
     sha256 "873049d4080168b56085c5b67be1d4eeb14debc0e6cf176dbd52c78518d0b883"
 
-    url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version.csv.first}-#{version.csv.second}.dmg"
+    url "http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/#{version.csv.first}/#{version.csv.second}/core/com.vmware.fusion.zip.tar"
 
     caveats do
       kext
     end
   end
   on_big_sur :or_newer do
+    arch arm: "arm64", intel: "x64"
     version "12.2.5,20904517"
     sha256 "403d14e7609f1863bd46617c90f2e3642f6b68ed387c1b7f8c62722d580c633c"
 
-    url "https://download3.vmware.com/software/FUS-#{version.csv.first.no_dots}/VMware-Fusion-#{version.csv.first}-#{version.csv.second}_x86.dmg"
+    url "http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/#{version.csv.first}/#{version.csv.second}/#{arch}/core/com.vmware.fusion.zip.tar"
   end
 
   name "VMware Fusion"
@@ -28,8 +29,9 @@ cask "vmware-fusion@12" do
     vmware-fusion-tech-preview
   ]
   depends_on macos: ">= :catalina"
+  container nested: "com.vmware.fusion.zip"
 
-  app "VMware Fusion.app"
+  app "#{staged_path}/payload/VMware Fusion.app"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vkd/bin/vctl"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-bridge"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-cfgcli"
