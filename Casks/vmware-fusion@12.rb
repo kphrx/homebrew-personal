@@ -1,7 +1,7 @@
 cask "vmware-fusion@12" do
   on_catalina :or_older do
     version "12.1.2,17964953"
-    sha256 "873049d4080168b56085c5b67be1d4eeb14debc0e6cf176dbd52c78518d0b883"
+    sha256 "6f11ce933dfa13fc336f1709bc22bc323578ecf10b98368db36d83bc469024f7"
 
     url "http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/#{version.csv.first}/#{version.csv.second}/core/com.vmware.fusion.zip.tar"
 
