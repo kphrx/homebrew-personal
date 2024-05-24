@@ -14,7 +14,7 @@ cask "vmware-fusion@12" do
 
     version "12.2.5,20904517"
     sha256 arm:   "62a377486a7c9dc1eddadffe180a06a6703d2a98b6313ffff60adcf23706d9a4",
-           intel: "403d14e7609f1863bd46617c90f2e3642f6b68ed387c1b7f8c62722d580c633c"
+           intel: "2cf20b4b79a8b96e6c77c26fc7487db97946e158e3cb65dd52848b78770db1da"
 
     url "http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/#{version.csv.first}/#{version.csv.second}/#{arch}/core/com.vmware.fusion.zip.tar"
   end
