@@ -10,9 +10,11 @@ cask "vmware-fusion@12" do
     end
   end
   on_big_sur :or_newer do
-    arch arm: "arm64", intel: "x64"
+    arch arm: "arm64", intel: "x86"
+
     version "12.2.5,20904517"
-    sha256 "403d14e7609f1863bd46617c90f2e3642f6b68ed387c1b7f8c62722d580c633c"
+    sha256 arm:   "62a377486a7c9dc1eddadffe180a06a6703d2a98b6313ffff60adcf23706d9a4",
+           intel: "403d14e7609f1863bd46617c90f2e3642f6b68ed387c1b7f8c62722d580c633c"
 
     url "http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/#{version.csv.first}/#{version.csv.second}/#{arch}/core/com.vmware.fusion.zip.tar"
   end
