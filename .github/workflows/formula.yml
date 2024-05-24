@@ -2,10 +2,9 @@ name: Formula CI
 
 on:
   pull_request:
-    paths-ignore:
-      - "Casks/**"
-    # paths:
-    #   - "Formula/**"
+    paths:
+      - "Formula/**"
+      - ".github/workflows/formula.yml"
 
 jobs:
   conclusion:
