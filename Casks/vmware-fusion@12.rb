@@ -28,7 +28,7 @@ cask "vmware-fusion@12" do
   auto_updates true
   conflicts_with cask: %w[
     vmware-fusion
-    vmware-fusion-tech-preview
+    vmware-fusion@preview
   ]
   depends_on macos: ">= :catalina"
   container nested: "com.vmware.fusion.zip"
