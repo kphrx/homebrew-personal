@@ -21,6 +21,8 @@ cask "airmail-beta" do
     end
   end
 
+  disable! date: "2024-09-26", because: :moved_to_mas
+
   depends_on macos: ">= :sierra"
 
   app "Airmail Beta.app"
