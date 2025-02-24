@@ -32,4 +32,8 @@ class Swiftly < Formula
     bin.install ".build/release/swiftly"
     doc.install "Documentation/SwiftlyDocs.docc/swiftly-cli-reference.md"
   end
+
+  test do
+    assert_match "USAGE: swiftly <subcommand>", shell_output("#{bin}/swiftly --help")
+  end
 end
