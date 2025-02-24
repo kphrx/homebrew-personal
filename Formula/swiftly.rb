@@ -1,5 +1,5 @@
 class Swiftly < Formula
-  desc "A Swift toolchain installer and manager, written in Swift."
+  desc "Swift toolchain installer and manager"
   homepage "https://github.com/swiftlang/swiftly"
   url "https://github.com/swiftlang/swiftly.git",
       tag:      "0.4.0",
