@@ -14,5 +14,5 @@ cask "font-pending-mono" do
   font "PendingMono_v#{version}/PendingMono-Bold.ttf"
   font "PendingMono_v#{version}/PendingMono-BoldItalic.ttf"
   font "PendingMono_v#{version}/PendingMono-Regular.ttf"
-  font "PendingMono_v#{version}/PendingMono-RegularItalic.ttf"
+  font "PendingMono_v#{version}/PendingMono-Italic.ttf"
 end
