@@ -11,8 +11,8 @@ cask "font-pending-mono" do
     url :url
   end
 
-  font "PendingMono-Bold.ttf"
-  font "PendingMono-BoldItalic.ttf"
-  font "PendingMono-Regular.ttf"
-  font "PendingMono-RegularItalic.ttf"
+  font "PendingMono_v#{version}/PendingMono-Bold.ttf"
+  font "PendingMono_v#{version}/PendingMono-BoldItalic.ttf"
+  font "PendingMono_v#{version}/PendingMono-Regular.ttf"
+  font "PendingMono_v#{version}/PendingMono-RegularItalic.ttf"
 end
