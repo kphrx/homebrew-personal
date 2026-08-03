@@ -12,7 +12,7 @@ cask "jpki" do
     regex(/Ver ((\d)+.(\d)+(.(\d)+)?)/)
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: :catalina
 
   pkg "JPKIInstall.pkg"
 
