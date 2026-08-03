@@ -28,12 +28,13 @@ cask "nowplayingtweet" do
 
   deprecate! date: "2023-02-02", because: :discontinued
 
-  depends_on macos: [
-    # :mojave,
-    # :high_sierra,
-    # :sierra,
-    # :el_capitan,
-  ]
+  depends_on :macos
+  # depends_on macos: [
+  #   :mojave,
+  #   :high_sierra,
+  #   :sierra,
+  #   :el_capitan,
+  # ]
 
   app "NowPlayingTweet.app"
 end
