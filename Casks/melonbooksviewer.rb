@@ -9,6 +9,7 @@ cask "melonbooksviewer" do
   homepage "https://www.melonbooks.co.jp/ebook/list.php?category_id=77"
 
   deprecate! date: "2026-03-31", because: :discontinued
+
   depends_on maximum_macos: :golden_gate
 
   pkg "installer-signed-melon.pkg"
