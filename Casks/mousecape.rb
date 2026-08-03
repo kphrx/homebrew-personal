@@ -11,5 +11,7 @@ cask "mousecape" do
     url :url
   end
 
+  depends_on macos: :high_sierra
+
   app "Mousecape.app"
 end
