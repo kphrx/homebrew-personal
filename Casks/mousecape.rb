@@ -23,4 +23,8 @@ cask "mousecape" do
   ]
 
   app "Mousecape.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
