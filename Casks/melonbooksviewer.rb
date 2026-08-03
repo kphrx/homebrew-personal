@@ -10,7 +10,20 @@ cask "melonbooksviewer" do
 
   deprecate! date: "2026-03-31", because: :discontinued
 
-  depends_on maximum_macos: :golden_gate
+  depends_on macos: [
+    :golden_gate,
+    :tahoe,
+    :sequoia,
+    :sonoma,
+    :ventura,
+    :monterey,
+    :big_sur,
+    :catalina,
+    :mojave,
+    :high_sierra,
+    :sierra,
+    :el_capitan,
+  ]
 
   pkg "installer-signed-melon.pkg"
 

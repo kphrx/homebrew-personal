@@ -11,7 +11,16 @@ cask "mousecape" do
     url :url
   end
 
-  depends_on macos: :high_sierra
+  depends_on macos: [
+    :sequoia,
+    :sonoma,
+    :ventura,
+    :monterey,
+    :big_sur,
+    :catalina,
+    :mojave,
+    :high_sierra,
+  ]
 
   app "Mousecape.app"
 end
