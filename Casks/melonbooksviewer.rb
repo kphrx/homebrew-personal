@@ -19,10 +19,10 @@ cask "melonbooksviewer" do
     :monterey,
     :big_sur,
     :catalina,
-    :mojave,
-    :high_sierra,
-    :sierra,
-    :el_capitan,
+    # :mojave,
+    # :high_sierra,
+    # :sierra,
+    # :el_capitan,
   ]
 
   pkg "installer-signed-melon.pkg"

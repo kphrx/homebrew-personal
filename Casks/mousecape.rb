@@ -18,8 +18,8 @@ cask "mousecape" do
     :monterey,
     :big_sur,
     :catalina,
-    :mojave,
-    :high_sierra,
+    # :mojave,
+    # :high_sierra,
   ]
 
   app "Mousecape.app"
