@@ -28,6 +28,7 @@ cask "nowplayingtweet" do
 
   deprecate! date: "2023-02-02", because: :discontinued
 
+  depends_on arch: :intel
   depends_on :macos
   # depends_on macos: [
   #   :mojave,
