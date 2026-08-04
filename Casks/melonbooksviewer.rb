@@ -8,6 +8,23 @@ cask "melonbooksviewer" do
   desc "Ebook viewer"
   homepage "https://www.melonbooks.co.jp/ebook/list.php?category_id=77"
 
+  deprecate! date: "2026-03-31", because: :discontinued
+
+  depends_on macos: [
+    :golden_gate,
+    :tahoe,
+    :sequoia,
+    :sonoma,
+    :ventura,
+    :monterey,
+    :big_sur,
+    :catalina,
+    # :mojave,
+    # :high_sierra,
+    # :sierra,
+    # :el_capitan,
+  ]
+
   pkg "installer-signed-melon.pkg"
 
   uninstall pkgutil: "jp.co.melonbooks.viewer"
