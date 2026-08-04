@@ -31,7 +31,7 @@ cask "nowplayingtweet" do
   depends_on arch: :intel
   depends_on :macos
 
-    # depends_on macos: [
+  # depends_on macos: [
   #   :mojave,
   #   :high_sierra,
   #   :sierra,
